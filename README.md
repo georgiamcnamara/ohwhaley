@@ -3,23 +3,25 @@
 
 # ohwhaley
 
-<!-- badges: start -->
-<!-- badges: end -->
+Whale-come! This R package was inspired by
+[cowsay](https://github.com/sckott/cowsay) and
+[praise](https://github.com/rladies/praise). I hope this package made
+you smile today!
 
-The goal of ohwhaley is to …
+## First things first
 
-## Installation
-
-You can install the released version of ohwhaley from
-[CRAN](https://CRAN.R-project.org) with:
+`ohwhaley` is a toy project and is still under development. You can
+install the latest version from [GitHub](https://github.com/) with:
 
 ``` r
-install.packages("ohwhaley")
+# install.packages("remotes")
+remotes::install_github("fontikar/ohwhaley")
 ```
 
-## Example
+## Take it for a spin
 
-This is a basic example which shows you how to solve a common problem:
+`ohwhaley` contains one function only. `say()` will echo a randomly
+chosen whale-themed phrase for your enjoyment.
 
 ``` r
 devtools::document()
@@ -28,32 +30,38 @@ devtools::document()
 #> Writing NAMESPACE
 #> Writing NAMESPACE
 library(ohwhaley)
-## basic example code
+ 
+say() 
+#> 
+#>             ------ 
+#>            Whale, whale, whale...look who's here! 
+#>             ------ 
+#>                \   
+#>                 \  
+#>                  \
+#>      .-'
+#> '--./ /     _.---.
+#> '-,  (__..-`       \
+#>    \          .     |
+#>     `,.__.   ,__.--/
+#>      '._/_.'___.-`
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+Alternatively, you can supply your own phrase
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+say("I'm beached as bro!!!")
+#> 
+#>             ------ 
+#>            I'm beached as bro!!! 
+#>             ------ 
+#>                \   
+#>                 \  
+#>                  \
+#>      .-'
+#> '--./ /     _.---.
+#> '-,  (__..-`       \
+#>    \          .     |
+#>     `,.__.   ,__.--/
+#>      '._/_.'___.-`
 ```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/master/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
